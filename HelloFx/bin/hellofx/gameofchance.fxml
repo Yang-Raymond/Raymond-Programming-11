@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.Controller">
+   <children>
+      <Label layoutX="125.0" layoutY="14.0" text="Game of Chance">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutY="72.0" prefHeight="51.0" prefWidth="487.0" spacing="5.0">
+         <children>
+            <Label text="Enter amount of money">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldamount" promptText="ex. 21" />
+            <Button fx:id="buttonAmount" mnemonicParsing="false" onAction="#submit" text="Insert" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="296.0" prefHeight="63.0" prefWidth="487.0">
+         <children>
+            <Label fx:id="labelDice" textAlignment="CENTER">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="204.0" prefHeight="51.0" prefWidth="487.0" spacing="40.0">
+         <children>
+            <RadioButton fx:id="radiobuttonHigher" disable="true" mnemonicParsing="false" onAction="#guess" text="Higher">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Guess" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radiobuttonSame" disable="true" mnemonicParsing="false" onAction="#guess" text="Same" toggleGroup="$Guess" />
+            <RadioButton fx:id="radiobuttonLower" disable="true" mnemonicParsing="false" onAction="#guess" text="Lower" toggleGroup="$Guess" />
+         </children>
+      </HBox>
+      <Label layoutX="106.0" layoutY="174.0" text="Guess if the next number if it's :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonRoll" disable="true" layoutX="225.0" layoutY="263.0" mnemonicParsing="false" onAction="#roll" text="Roll" />
+      <HBox alignment="CENTER" layoutY="123.0" prefHeight="51.0" prefWidth="487.0" spacing="10.0">
+         <children>
+            <Label text="How much do you want to bet?">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textfieldBet" promptText="ex. 5" />
+            <Button fx:id="buttonBet" disable="true" mnemonicParsing="false" onAction="#setBetamount" text="Bet" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="376.0" prefHeight="73.0" prefWidth="487.0">
+         <children>
+            <Label fx:id="labelError">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
