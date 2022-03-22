@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="419.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Friendsbook.Controller">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+         <content>
+            <AnchorPane prefHeight="222.0" prefWidth="385.0">
+               <children>
+                  <HBox prefHeight="53.0" prefWidth="419.0">
+                     <children>
+                        <Label text="Friend's name: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textfieldName" promptText="John Doe" />
+                     </children>
+                  </HBox>
+                  <HBox layoutY="34.0" prefHeight="169.0" prefWidth="419.0">
+                     <children>
+                        <Label text="Friends properties: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textareaProperties" prefHeight="166.0" prefWidth="189.0" promptText="cool, funny, quiet etc." />
+                     </children>
+                  </HBox>
+                  <Button fx:id="buttonSubmit" layoutX="176.0" layoutY="214.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+    <Tab text="Untitled Tab 2">
+         <content>
+            <AnchorPane prefHeight="265.0" prefWidth="408.0">
+               <children>
+                  <ListView fx:id="listviewFriends" onMouseClicked="#displayFriend" prefHeight="251.0" prefWidth="176.0" />
+                  <HBox alignment="TOP_CENTER" layoutX="176.0" prefHeight="32.0" prefWidth="243.0">
+                     <children>
+                        <Label fx:id="labelTitle">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="176.0" layoutY="32.0" prefHeight="34.0" prefWidth="243.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="labelNametitle" opacity="0.0" text="Name:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelName">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="176.0" layoutY="66.0" prefHeight="154.0" prefWidth="243.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="labelPropertiestitle" opacity="0.0" prefHeight="30.0" prefWidth="124.0" text="Properties: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="textProperties" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Button fx:id="buttonDelete" layoutX="272.0" layoutY="220.0" mnemonicParsing="false" onAction="#delete" text="delete" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+  </tabs>
+</TabPane>
