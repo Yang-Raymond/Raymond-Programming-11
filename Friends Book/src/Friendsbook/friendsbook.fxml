@@ -85,6 +85,8 @@
                      </children>
                   </HBox>
                   <Button fx:id="buttonDelete" layoutX="272.0" layoutY="220.0" mnemonicParsing="false" onAction="#delete" text="delete" />
+                  <Button fx:id="buttonSave" layoutX="329.0" layoutY="220.0" mnemonicParsing="false" onAction="#save" text="save" />
+                  <Button fx:id="buttonLoad" layoutX="225.0" layoutY="220.0" mnemonicParsing="false" onAction="#load" text="load" />
                </children>
             </AnchorPane>
          </content></Tab>
